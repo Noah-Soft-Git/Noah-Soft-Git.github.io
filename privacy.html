@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noah 개인정보처리방침</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="mark">N</span>Noah</a>
+    <nav><a href="./">홈</a><a href="terms.html">이용 약관</a></nav>
+  </div>
+</header>
+<main class="wrap doc">
+  <h1>Noah 개인정보처리방침</h1>
+  <p class="meta">시행일: 2026년 11월 9일</p>
+
+  <p>Noah(이하 "앱")는 사용자의 PC에서 실행되는 Windows 개인 업무 도구입니다. 앱을 만든 사람(이하 "개발자")은 별도의 서버를 운영하지 않으며, 사용자의 데이터를 모으거나 보관하거나 열람하지 않습니다. 이 방침은 앱이 어떤 정보를 어디에 저장하고 어디로 보내는지 설명합니다.</p>
+
+  <h2>1. 기본 원칙: 내 PC에 저장</h2>
+  <p>일정, 메모, 프로젝트, 회의록, 첨부 파일, 설정 등 앱에서 만든 데이터는 사용자의 PC(Windows 사용자 폴더)에 저장됩니다. 로그인하지 않아도 앱의 모든 기능을 쓸 수 있습니다.</p>
+
+  <h2>2. 구글 계정 로그인과 동기화(선택)</h2>
+  <p>사용자가 구글 계정으로 로그인하면, 앱은 다음 권한만 요청합니다.</p>
+  <ul>
+    <li><b>이메일 주소와 기본 프로필(이름)</b> — 어떤 계정으로 로그인했는지 앱 화면에 보여 주기 위해 사용합니다.</li>
+    <li><b>Google 드라이브의 앱 전용 데이터(drive.appdata)</b> — 사용자 본인의 구글 드라이브 안에 있는, Noah만 쓰는 숨은 공간에 동기화 데이터를 저장하고 읽기 위해 사용합니다. 이 권한으로는 사용자의 다른 드라이브 파일을 보거나 바꿀 수 없습니다.</li>
+  </ul>
+  <p>동기화되는 데이터는 일정·회의록·기념일, 주간 메모, 개인 프로젝트, 첨부·보관 파일, 브라우저 즐겨찾기, 앱 설정이며, 사용자가 켠 경우에만 회의 녹음 파일도 포함됩니다. 이 데이터는 <b>사용자 본인의 구글 드라이브에만</b> 저장되고, 앱은 구글의 서버와 사용자의 PC 사이에서만 데이터를 주고받습니다. 개발자는 이 데이터에 접근할 수 없습니다.</p>
+  <p>로그인 정보(갱신 토큰)는 Windows의 암호화 기능으로 사용자 PC에만 암호화해 저장하며, 다른 곳으로 보내지 않습니다. API 키, 원격 접속·캘린더 비밀번호는 동기화하지 않습니다.</p>
+
+  <h2>3. Google 사용자 데이터의 사용 제한</h2>
+  <p>앱이 Google API로 받은 정보의 사용과 다른 앱으로의 전송은 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>(제한적 사용 요건 포함)을 따릅니다. Google 사용자 데이터를 광고, 판매, 사람의 열람, AI 모델 학습에 사용하거나 제3자에게 넘기지 않습니다.</p>
+
+  <h2>4. 사용자가 직접 켜는 기능에서 외부로 보내는 정보</h2>
+  <ul>
+    <li><b>캘린더 연결(네이버·구글)</b>: 사용자가 연결한 캘린더 서비스와 일정 정보를 주고받습니다.</li>
+    <li><b>날씨</b>: 고른 지역의 좌표를 Open-Meteo에 보냅니다.</li>
+    <li><b>환율</b>: 통화 코드를 Coinbase 또는 ExchangeRate-API에 보냅니다.</li>
+    <li><b>시간 맞추기</b>: 시간 서버(NTP)에 현재 시각을 묻습니다.</li>
+    <li><b>AI</b>: 사용자가 자신의 API 키를 넣은 AI 서비스에, 사용자가 입력한 대화와 붙인 파일을 보냅니다.</li>
+    <li><b>음성 인식 모델</b>: 사용자가 받기를 누를 때만 모델 파일을 내려받습니다. 회의 녹음과 받아쓴 글은 PC 밖으로 보내지 않습니다(위 동기화에서 녹음 동기화를 켠 경우는 제외).</li>
+  </ul>
+
+  <h2>5. 데이터 삭제와 권한 취소</h2>
+  <ul>
+    <li>앱의 설정 → 계정 · 동기화에서 언제든 로그아웃할 수 있습니다.</li>
+    <li>구글 계정 → 보안 → <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">타사 앱 및 서비스</a>에서 Noah의 권한을 취소할 수 있습니다.</li>
+    <li>드라이브에 저장된 Noah 데이터는 Google 드라이브 웹 → 설정 → 앱 관리 → Noah → '숨겨진 앱 데이터 삭제'로 지울 수 있습니다.</li>
+    <li>PC의 데이터는 앱의 데이터 초기화 기능이나 앱 제거로 지울 수 있습니다.</li>
+  </ul>
+
+  <h2>6. 아동의 개인정보</h2>
+  <p>앱은 아동을 대상으로 하지 않으며, 아동의 정보를 알면서 수집하지 않습니다.</p>
+
+  <h2>7. 방침의 변경</h2>
+  <p>이 방침이 바뀌면 이 페이지에 새 내용과 시행일을 게시합니다.</p>
+
+  <h2>8. 문의</h2>
+  <p>개인정보에 관한 문의: <a href="mailto:leera5041@gmail.com">leera5041@gmail.com</a></p>
+
+  <hr>
+  <h2 id="en">Privacy Policy (English summary)</h2>
+  <p>Noah is a Windows desktop app. The developer runs no servers and does not collect, store or access user data. Data is stored on the user's PC. If the user signs in with Google, Noah requests only the user's email address and basic profile (to show which account is signed in) and the Google Drive app data scope (drive.appdata) to store sync data in a hidden, app-only folder in the user's own Google Drive; it cannot access other Drive files. Sign-in tokens are stored encrypted on the user's PC only. Noah's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements; Google user data is never sold, used for advertising, read by humans, used to train AI models, or shared with third parties. Users can sign out in the app, revoke access at myaccount.google.com/connections, and delete hidden app data in Google Drive settings → Manage apps. Contact: leera5041@gmail.com.</p>
+</main>
+<footer class="wrap foot"><span>© Noah</span><span><a href="./">홈</a> · <a href="terms.html">이용 약관</a></span></footer>
+</body>
+</html>
